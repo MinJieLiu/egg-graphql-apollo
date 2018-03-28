@@ -1,1 +1,1 @@
-# egg-apollo
+# egg-graphql-apollo
