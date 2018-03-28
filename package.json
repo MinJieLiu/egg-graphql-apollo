@@ -1,0 +1,66 @@
+{
+  "name": "egg-apollo",
+  "version": "0.0.1",
+  "description": "egg graphql-tools plugin",
+  "eggPlugin": {
+    "name": "graphql"
+  },
+  "keywords": [
+    "egg",
+    "graphql",
+    "egg-plugin",
+    "eggPlugin",
+    "graphql-tools"
+  ],
+  "dependencies": {
+    "apollo-server-koa": "^1.3.3",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.8.0",
+    "graphql-tools": "^2.23.1",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "autod": "^2.9.0",
+    "dataloader": "^1.4.0",
+    "egg": "^2.5.0",
+    "egg-bin": "^4.5.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.0.0",
+    "mysql": "^2.12.0",
+    "supertest": "^3.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "files": [
+    "app.js",
+    "agent.js",
+    "config",
+    "app",
+    "lib"
+  ],
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MinJieLiu/egg-apollo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MinJieLiu/egg-apollo/issues"
+  },
+  "homepage": "https://github.com/MinJieLiu/egg-apollo",
+  "author": "LMY",
+  "license": "MIT"
+}
