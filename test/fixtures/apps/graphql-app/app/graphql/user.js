@@ -10,7 +10,7 @@ type Query {
 type User {
   id: String!
   password: String!
-  name: String! @deprecated(reason: "Use 'upperName'.")
+  name: String!
   upperName: String @upper
   projects: [Project!]
 }
