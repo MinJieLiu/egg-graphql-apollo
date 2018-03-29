@@ -1,6 +1,6 @@
 {
   "name": "egg-graphql-apollo",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "egg graphql-tools plugin",
   "eggPlugin": {
     "name": "graphql"
