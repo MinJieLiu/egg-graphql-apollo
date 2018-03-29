@@ -2,10 +2,10 @@
 
 [![npm](https://img.shields.io/npm/v/egg-graphql-apollo.svg?style=flat-square)](https://www.npmjs.com/package/egg-graphql-apollo)
 [![travis-ci](https://travis-ci.org/MinJieLiu/egg-graphql-apollo.svg?branch=master)](https://travis-ci.org/MinJieLiu/egg-graphql-apollo)
-[![Coverage Status](https://coveralls.io/repos/github/MinJieLiu/egg-graphql-apollo/badge.svg?branch=master)](https://coveralls.io/github/MinJieLiu/egg-graphql-apollo?branch=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/MinJieLiu/egg-graphql-apollo.svg?style=flat-square)](https://codecov.io/gh/MinJieLiu/egg-graphql-apollo)
 [![npm](https://img.shields.io/npm/dt/egg-graphql-apollo.svg?style=flat-square)](https://github.com/MinJieLiu/egg-graphql-apollo)
 
-插件参考了 `egg-graphql`，并与 `egg-graphql` 配置保持一致。不同的是，推荐业务实现的方式有差别。
+插件参考了 `egg-graphql`，并与 `egg-graphql` 配置保持一致。不同的地方是文件结构定义和编写方式。
 
 `egg-graphql-apollo` 推荐 `graphql` 模型定义及 `resolvers` 等相关逻辑在 `app/graphql` 目录中实现。
 
@@ -36,7 +36,9 @@ exports.schemaDirective = {};
 
 ```
 
-除了目录，每个文件输出可选 `typeDef`、`resolver`、`directiveResolver`、`schemaDirective`，具体见测试用例。另外 `*.graphql` 也会默认被加载。
+每个 js 文件输出可选 `typeDef`、`resolver`、`directiveResolver`、`schemaDirective`，具体见测试用例，API： [graphql-tools](https://github.com/apollographql/graphql-tools)。这样做的好处是业务归类清晰、`graphql schema` 可组合。
+
+你也可以编写 `.graphql` 文件，插件会加载并组合它们。
 
 ## 安装
 
