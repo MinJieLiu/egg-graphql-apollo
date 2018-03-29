@@ -4,12 +4,13 @@ exports.typeDef = `
 type Query {
   user(id: Int): User
   projects: [Project!]
+  today: Date @date
 }
 
 type User {
   id: String!
   password: String!
-  name: String!
+  name: String! @deprecated(reason: "Use 'upperName'.")
   upperName: String @upper
   projects: [Project!]
 }

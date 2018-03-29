@@ -47,4 +47,12 @@ describe('test/plugin.test.js', () => {
     }));
     assert.deepEqual(resp.data, { user: { upperName: 'NAME1' } });
   });
+
+  it('should return date with @date directive', async () => {
+    const ctx = app.mockContext();
+    const resp = await ctx.graphql.query(JSON.stringify({
+      query: '{ today(format: "YYYY-MM-DD") }',
+    }));
+    assert.deepEqual(resp.data, { today: '2018-03-29' });
+  });
 });
