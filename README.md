@@ -49,7 +49,6 @@ $ npm i egg-graphql-apollo
 在 `config/plugin.js` 开启插件：
 
 ```js
-//
 exports.graphql = {
   package: 'egg-graphql-apollo',
 };
