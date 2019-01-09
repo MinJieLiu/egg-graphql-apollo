@@ -58,6 +58,9 @@ exports.graphql = {
 
 ```js
 // config/config.${env}.js
+
+config.middleware = [ 'graphql' ];
+
 exports.graphql = {
   router: '/graphql',
   graphiql: true,
